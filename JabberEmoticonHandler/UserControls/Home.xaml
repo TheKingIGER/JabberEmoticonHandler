@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="JabberEmoticonHandler.UserControls.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JabberEmoticonHandler.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="527" d:DesignWidth="792">
+    <Grid>
+        <RichTextBox x:Name="richTextBox" Margin="0" Foreground="White" SelectionBrush="{x:Null}" FontSize="16" FontFamily="EmojiOne Color" Background="{x:Null}" BorderBrush="{x:Null}" IsTabStop="False" AllowDrop="False" IsReadOnly="True" IsHitTestVisible="True" MinWidth="50" Focusable="False" Style="{DynamicResource RichTextBoxStyle1}">
+            <FlowDocument>
+                <Paragraph FontWeight="Bold" Padding="0,10,0,30" TextAlignment="Center">
+                    <Run Text="Herzlich Willkommen beim Jabber Emoticon Handler" FontSize="20"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Der Jabber Emoticon Handler oder kurz JEH bietet dir eine große Auswahl an "/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</UserControl>
