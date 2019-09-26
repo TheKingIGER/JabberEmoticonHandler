@@ -82,6 +82,7 @@
                 <StaticResource ResourceKey="{x:Type TextBoxBase}"/>
             </Style.BasedOn>
         </Style>
-
+        <SolidColorBrush x:Key="MenuBackgroundBrush" Color="#FF2B2B2B"/>
+        <SolidColorBrush x:Key="MenuSelectedBackgroundBrush" Color="#FF262626"/>
     </Application.Resources>
 </Application>

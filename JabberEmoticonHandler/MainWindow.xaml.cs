@@ -84,11 +84,11 @@ namespace JabberEmoticonHandler
 
         public void SelectButton(Button btn)
         {
-            btn.Background = new SolidColorBrush(Color.FromArgb(255, 35, 35, 35));
+            btn.Background = FindResource("MenuSelectedBackgroundBrush") as Brush;
         }
         public void UnSelectButton(Button btn)
         {
-            btn.Background = null;
+            btn.Background = FindResource("MenuBackgroundBrush") as Brush;
         }
 
         //

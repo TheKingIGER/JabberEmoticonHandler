@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:JabberEmoticonHandler"
         xmlns:controls="clr-namespace:JabberEmoticonHandler.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000" WindowStyle="None">
+        Title="MainWindow" Height="600" Width="1000" WindowStyle="None" MinWidth="310" MinHeight="65" AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -103,28 +103,24 @@
     </Window.Resources>
     <Grid>
         <DockPanel x:Name="MainWindow1">
-            <DockPanel x:Name="StatusBar" DockPanel.Dock="Bottom" Height="20" Background="#FF2B2B2B">
-                
+            <DockPanel x:Name="StatusBar" DockPanel.Dock="Bottom" Height="20" Background="{DynamicResource MenuBackgroundBrush}">
+
             </DockPanel>
-            <DockPanel x:Name="Menu" HorizontalAlignment="Left" Margin="0,0,0,0" Width="200" Background="#FF2B2B2B" MinWidth="200">
+            <DockPanel x:Name="Menu" HorizontalAlignment="Left" Margin="0,0,0,0" Width="200" Background="{DynamicResource MenuBackgroundBrush}" MinWidth="200">
                 <DockPanel x:Name="Header" VerticalAlignment="Top" Height="50" Background="#FF2B2B2B" DockPanel.Dock="Top" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
                     <Border BorderBrush="#FF272727" BorderThickness="1" Height="45"/>
-                    <Image DockPanel.Dock="Left" HorizontalAlignment="Left" Width="50">
-                        <Image.OpacityMask>
-                            <ImageBrush TileMode="Tile" Stretch="None"/>
-                        </Image.OpacityMask>
-                    </Image>
-                    <Label DockPanel.Dock="Top" Content="JEH" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="EmojiOne Color"/>
+                    <Image DockPanel.Dock="Left" HorizontalAlignment="Left" Width="50" OpacityMask="Black" Source="Res/JEH.png" Margin="20,0,0,0" Stretch="None"/>
+                    <Label DockPanel.Dock="Top" Content="JEH" Foreground="White" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="EmojiOne Color" Margin="15,0,0,0"/>
                 </DockPanel>
-                <Button x:Name="B_Home" Content="Home" DockPanel.Dock="Top"  Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" UseLayoutRounding="False" Click="B_Home_Click"/>
-                <Button x:Name="B_Download" Content="Download" DockPanel.Dock="Top" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" Click="B_Download_Click"/>
-                <Button x:Name="B_Application" Content="Anwendung" DockPanel.Dock="Top"  Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" Click="B_Application_Click"/>
-                <Button x:Name="B_PacketList" Content="Paketliste" DockPanel.Dock="Top"  Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" Click="B_PacketList_Click"/>
-                <Button x:Name="B_Settings" Content="Einstellungen" DockPanel.Dock="Top"  Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" Click="B_Settings_Click"/>
+                <Button x:Name="B_Home" Content="Home" DockPanel.Dock="Top"  Foreground="White" Background="{DynamicResource MenuBackgroundBrush}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" UseLayoutRounding="False" Click="B_Home_Click"/>
+                <Button x:Name="B_Download" Content="Download" DockPanel.Dock="Top" Foreground="White" Background="{DynamicResource MenuBackgroundBrush}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" Click="B_Download_Click"/>
+                <Button x:Name="B_Application" Content="Anwendung" DockPanel.Dock="Top"  Foreground="White" Background="{DynamicResource MenuBackgroundBrush}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" Click="B_Application_Click"/>
+                <Button x:Name="B_PacketList" Content="Paketliste" DockPanel.Dock="Top"  Foreground="White" Background="{DynamicResource MenuBackgroundBrush}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="EmojiOne Color" Click="B_PacketList_Click"/>
+                <Button x:Name="B_Settings" Content="Einstellungen" DockPanel.Dock="Top"  Foreground="White" Background="{DynamicResource MenuBackgroundBrush}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Height="45" VerticalAlignment="Top" Margin="0,10,0,0" Click="B_Settings_Click"/>
             </DockPanel>
-            <DockPanel x:Name="Topbar" Height="45" Margin="0" VerticalAlignment="Top" Background="#FF2B2B2B" DockPanel.Dock="Top" MouseLeftButtonDown="Topbar_MouseLeftButtonDown">
+            <DockPanel x:Name="Topbar" Height="45" Margin="0" VerticalAlignment="Top" Background="{DynamicResource MenuBackgroundBrush}" DockPanel.Dock="Top" MouseLeftButtonDown="Topbar_MouseLeftButtonDown">
                 <Button x:Name="B_Close" Content="X" Width="59" DockPanel.Dock="Right" HorizontalAlignment="Right" FontSize="16" Background="#FF513434" Foreground="White" BorderBrush="{x:Null}" Style="{DynamicResource CloseButton}" Click="B_Close_Click"/>
-                <Button x:Name="B_Min" Content="_" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="50" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Click="B_Min_Click"/>
+                <Button x:Name="B_Min" Content="_" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="50" Foreground="White" BorderBrush="{x:Null}" FontSize="16" Style="{DynamicResource StandardButton}" Click="B_Min_Click" Background="{DynamicResource MenuBackgroundBrush}"/>
             </DockPanel>
             <DockPanel x:Name="UserControlContainer" DockPanel.Dock="Right" Margin="0" Background="#FF3E3E3E">
                 <controls:Home x:Name="UserControl"></controls:Home>

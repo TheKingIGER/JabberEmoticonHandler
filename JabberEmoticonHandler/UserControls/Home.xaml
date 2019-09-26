@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="527" d:DesignWidth="792">
     <Grid>
-        <RichTextBox x:Name="richTextBox" Margin="0" Foreground="White" SelectionBrush="{x:Null}" FontSize="16" FontFamily="EmojiOne Color" Background="{x:Null}" BorderBrush="{x:Null}" IsTabStop="False" AllowDrop="False" IsReadOnly="True" IsHitTestVisible="True" MinWidth="50" Focusable="False" Style="{DynamicResource RichTextBoxStyle1}">
+        <RichTextBox x:Name="richTextBox" Margin="0" Foreground="White" SelectionBrush="{x:Null}" FontSize="16" FontFamily="EmojiOne Color" Background="{x:Null}" BorderBrush="{x:Null}" IsTabStop="False" AllowDrop="False" IsReadOnly="True" IsHitTestVisible="True" MinWidth="50" Focusable="False" Style="{DynamicResource RichTextBoxStyle1}" Cursor="Arrow">
             <FlowDocument>
                 <Paragraph FontWeight="Bold" Padding="0,10,0,30" TextAlignment="Center">
                     <Run Text="Herzlich Willkommen beim Jabber Emoticon Handler" FontSize="20"/>
