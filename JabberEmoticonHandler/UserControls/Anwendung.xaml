@@ -7,6 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="527" d:DesignWidth="792">
     <Grid>
-            
+        <DockPanel Margin="0">
+            <Border BorderBrush="{DynamicResource Menu.Border.Brush}" BorderThickness="1,0" Width="200" HorizontalAlignment="Left">
+                <DockPanel Margin="0" Width="200" HorizontalAlignment="Left" Background="{DynamicResource MenuBackgroundBrush}">
+                    <Button x:Name="B_UpdateApp" Content="Update Application" Height="45" VerticalAlignment="Top" Style="{DynamicResource StandardButton}" BorderBrush="{x:Null}" Background="{DynamicResource MenuBackgroundBrush}" Foreground="{DynamicResource MainWindow.ForegroundBrush}" DockPanel.Dock="Top" Margin="0,10,0,0" FontSize="14"/>
+                    <Button x:Name="B_UpdatePacketlist" Content="Update Packetlist" Height="45" VerticalAlignment="Top" Style="{DynamicResource StandardButton}" BorderBrush="{x:Null}" Background="{DynamicResource MenuBackgroundBrush}" Foreground="{DynamicResource MainWindow.ForegroundBrush}" DockPanel.Dock="Top" Margin="0,10,0,0" FontSize="14"/>
+
+                </DockPanel>
+            </Border>
+        </DockPanel>
+
     </Grid>
 </UserControl>

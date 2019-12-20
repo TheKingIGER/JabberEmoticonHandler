@@ -24,5 +24,11 @@ namespace JabberEmoticonHandler.UserControls
         {
             InitializeComponent();
         }
+
+        private void B_Download_Click(object sender, RoutedEventArgs e)
+        {
+            TextRange textRange = new TextRange(RTB_Output.Document.ContentStart, RTB_Output.Document.ContentEnd);
+            textRange.Text = "Another world, another text!";
+        }
     }
 }

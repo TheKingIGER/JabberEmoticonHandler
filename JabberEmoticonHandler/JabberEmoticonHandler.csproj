@@ -164,5 +164,9 @@
   <ItemGroup>
     <Resource Include="Res\JEH.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objects\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

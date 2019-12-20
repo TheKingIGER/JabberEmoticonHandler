@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="527" d:DesignWidth="792">
     <Grid>
-            
+        <DockPanel LastChildFill="False" Margin="0"/>
     </Grid>
 </UserControl>

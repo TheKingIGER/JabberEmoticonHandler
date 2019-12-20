@@ -7,6 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="527" d:DesignWidth="792">
     <Grid>
-            
+        <DockPanel LastChildFill="False" Margin="10">
+            <ProgressBar x:Name="PB_DownloadProgress" DockPanel.Dock="Bottom" Height="10" Background="{DynamicResource MainWindow.BackgroundBrush}" BorderBrush="{DynamicResource MainWindow.BackgroundBrush}" Foreground="{DynamicResource MainWindow.AccentColor}" />
+            <Button x:Name="B_Download" Content="Download" Margin="0" Style="{DynamicResource UserControlButton}" Height="50" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Click="B_Download_Click"/>
+            <RichTextBox x:Name="RTB_InfoText" Height="200" DockPanel.Dock="Top" HorizontalAlignment="Center" Style="{DynamicResource UserControlRichTextBox_ReadOnly}">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text="Download"/>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="Infotext coming soon..."/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <RichTextBox x:Name="RTB_Output" Style="{DynamicResource UserControlRichTextBox_ReadOnly}">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=">_"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </DockPanel>
+
     </Grid>
 </UserControl>
